@@ -14,13 +14,23 @@ function addBookToLibrary(title, author, numOfPages, hasBeenRead) {
 
 addBookToLibrary("Memoirs of a Geisha", "Arthur Golden", 428, true);
 addBookToLibrary("A Delicate Truth", "John le Carre", 310, false);
-console.log(myLibrary);
 
-const bookList = document.getElementById("book-list");
-myLibrary.forEach((book) => {
-  const li = document.createElement("li");
-  li.textContent = `${book.title} by ${book.author}, ${
-    book.numOfPages
-  } pages, ${book.hasBeenRead ? "Read" : "Not Read"}`;
-  bookList.appendChild(li);
-});
+function displayBooks() {
+  const bookList = document.getElementById("book-list");
+  bookList.innerHTML = ""; // Clear table before adding new rows
+
+  myLibrary.forEach((book) => {
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+          <td>${book.title}</td>
+          <td>${book.author}</td>
+          <td>${book.numOfPages}</td>
+          <td>${book.hasBeenRead ? "✔" : "❌"}</td>
+      `;
+
+    bookList.appendChild(row);
+  });
+}
+
+displayBooks();
