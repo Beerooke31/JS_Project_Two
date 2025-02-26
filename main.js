@@ -14,6 +14,7 @@ function addBookToLibrary(title, author, numOfPages, hasBeenRead) {
 
 addBookToLibrary("Memoirs of a Geisha", "Arthur Golden", 428, true);
 addBookToLibrary("A Delicate Truth", "John le Carre", 310, false);
+addBookToLibrary("Sapiens", "Yuah Noah Harari", 466, false);
 
 function displayBooks() {
   const bookList = document.getElementById("book-list");
@@ -34,3 +35,11 @@ function displayBooks() {
 }
 
 displayBooks();
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}

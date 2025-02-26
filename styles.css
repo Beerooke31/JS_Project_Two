@@ -29,3 +29,53 @@ th {
 td {
   background-color: #fff;
 }
+
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.add-book {
+  color: #ff6b81;
+  margin-bottom: 15px;
+}
+
+.form-input {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: #fce4ec;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  background: #ffdde1;
+  transform: scale(1.05);
+}
+
+button {
+  background: #ff6b81;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #ff3b5c;
+  transform: scale(1.05);
+}
