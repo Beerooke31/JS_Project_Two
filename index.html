@@ -26,12 +26,12 @@
         <h2 class="add-book">Add New Book</h2>
 
         <div class="form-input">
-          <label for="title"><b>Title</b></label>
+          <label for="title" class="form-header"><h3>Title</h3></label>
           <input type="text" placeholder="Enter Title" name="title" required />
         </div>
 
         <div class="form-input">
-          <label for="author"><b>Author</b></label>
+          <label for="author" class="form-header"><h3>Author</h3></label>
           <input
             type="text"
             placeholder="Enter Author's Name"
@@ -41,7 +41,9 @@
         </div>
 
         <div class="form-input">
-          <label for="pages"><b>Number of Pages</b></label>
+          <label for="pages" class="form-header"
+            ><h3>Number of Pages</h3></label
+          >
           <input
             type="number"
             placeholder="Enter Number of Pages"
@@ -51,16 +53,18 @@
         </div>
 
         <div class="form-input">
-          <label for="read"><b>Have You Read This Book?</b></label>
+          <label for="read" class="form-header"
+            ><h3>Have You Read This Book?</h3></label
+          >
           <input type="checkbox" id="read" name="read" required />
         </div>
 
         <div class="form-input">
-        <button type="submit" class="btn">Submit Details</button>
-        <button type="button" class="btn cancel" onclick="closeForm()">
-          Close
-        </button>
-      </div>
+          <button type="submit" class="btn">Submit Details</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">
+            Close
+          </button>
+        </div>
       </form>
     </div>
     <script src="main.js"></script>

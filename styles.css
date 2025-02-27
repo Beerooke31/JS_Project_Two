@@ -45,12 +45,16 @@ td {
 }
 
 .form-input {
-  margin-bottom: 15px;
+  margin: 2rem;
+}
+
+.form-header {
+  padding-bottom: 5px;
 }
 
 input {
   width: 100%;
-  padding: 10px;
+  padding: 10px 0 10px 5px;
   border: none;
   border-radius: 10px;
   background: #fce4ec;
@@ -69,6 +73,7 @@ button {
   color: white;
   border: none;
   padding: 10px 15px;
+  margin: 1rem;
   border-radius: 10px;
   font-size: 16px;
   cursor: pointer;
