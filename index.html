@@ -16,13 +16,14 @@
           <th>Author</th>
           <th>Pages</th>
           <th>Read</th>
+          <th>Delete</th>
         </tr>
       </thead>
       <tbody id="book-list"></tbody>
     </table>
     <button class="open-button" onclick="openForm()">Open Form</button>
     <div class="form-popup" id="myForm">
-      <form action="/action_page.js" class="form-container">
+      <form action="">
         <h2 class="add-book">Add New Book</h2>
 
         <div class="form-input">
@@ -56,11 +57,11 @@
           <label for="read" class="form-header"
             ><h3>Have You Read This Book?</h3></label
           >
-          <input type="checkbox" id="read" name="read" required />
+          <input type="checkbox" id="read-checkbox" name="read" required />
         </div>
 
         <div class="form-input">
-          <button type="submit" class="btn">Submit Details</button>
+          <button type="submit" id="submitBtn">Submit Details</button>
           <button type="button" class="btn cancel" onclick="closeForm()">
             Close
           </button>
