@@ -42,6 +42,7 @@ td {
 .add-book {
   color: #ff6b81;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .form-input {
