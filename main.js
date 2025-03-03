@@ -27,17 +27,36 @@ function displayBooks() {
           <td>${book.title}</td>
           <td>${book.author}</td>
           <td>${book.numOfPages}</td>
-          <td>${book.hasBeenRead ? "✔" : "❌"}</td>
+          <td>${
+            book.hasBeenRead
+              ? "✔"
+              : `❌ <button class='readBtn' data-index='${index}'>Read yet?</button>`
+          }</td>
           <td><button class="deleteBtn" data-index="${index}">Delete</button></td>
           `;
 
     bookList.appendChild(row);
   });
 
+  const readButton = document.querySelectorAll(".readBtn");
+  readButton.forEach((button) => {
+    button.addEventListener("click", markAsRead);
+  });
+
   const deleteButton = document.querySelectorAll(".deleteBtn");
   deleteButton.forEach((button) => {
     button.addEventListener("click", deleteBook);
   });
+}
+
+function markAsRead(event) {
+  const index = event.target.dataset.index;
+  if (myLibrary[index]) {
+    myLibrary[index].hasBeenRead = true;
+    displayBooks();
+  } else {
+    console.error("Book not found at index: ", index);
+  }
 }
 
 function deleteBook(event) {
